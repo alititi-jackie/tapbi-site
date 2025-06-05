@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="theme-color" content="#0078d4">
   <title>TapBi.com - TapBi，灵感从点击开始，每一次点击，都是发现，点出创意，触动未来</title>
+  <meta name="description" content="TapBi.com - 华人常用·AI工具·网址大全。AI.TAPBI.COM、JOABC.COM、JOEABC.COM、ALITITI.COM等一键直达，导航你的灵感与效率。">
+  <meta name="keywords" content="TapBi, AI工具, ai.tapbi.com, joabc.com, joeabc.com, alititi.com, 华人导航, AI导航, 实用网站, 常用工具, 免费AI, 华人网站, 网址大全">
   <style>
     * { box-sizing: border-box; }
     body {
@@ -50,6 +52,31 @@
     }
     .top-actions button:hover {
       background-color: #005fa3;
+    }
+    /* AI平台直达导航样式 */
+    .ai-nav-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.2em;
+      margin: 18px auto 0 auto;
+      max-width: 95vw;
+      flex-wrap: wrap;
+    }
+    .ai-nav-links a {
+      color: #fff;
+      background: #0078d4;
+      padding: 7px 18px;
+      border-radius: 22px;
+      font-size: 15px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+      box-shadow: 0 2px 8px rgba(0,120,212,0.06);
+      margin-bottom: 4px;
+    }
+    .ai-nav-links a:hover {
+      background: #005fa3;
+      color: #fff;
     }
     .search {
       display: flex;
@@ -130,6 +157,8 @@
     }
     @media (max-width: 600px) {
       .logo { font-size: 1.1rem; }
+      .ai-nav-links a { font-size: 13px; padding: 6px 12px; }
+      .ai-nav-links { gap: 0.5em; }
       .recommend a, .section a { font-size: 12px; margin: 4px 6px; }
       .section, .section1, .section2, .section3, .recommend { padding: 8px; }
       .search { margin: 10px auto; }
@@ -227,6 +256,15 @@
     </div>
   </header>
 
+  <!-- AI平台直达链接区块 -->
+  <nav class="ai-nav-links" aria-label="AI平台直达">
+    <a href="https://ai.tapbi.com/" target="_blank" rel="noopener noreferrer">AI.TAPBI.COM</a>
+    <a href="https://joabc.com/" target="_blank" rel="noopener noreferrer">JOABC.COM</a>
+    <a href="https://joeabc.com/" target="_blank" rel="noopener noreferrer">JOEABC.COM</a>
+    <a href="https://alititi.com/" target="_blank" rel="noopener noreferrer">ALITITI.COM</a>
+    <a href="https://www.futurepedia.io/" target="_blank" rel="noopener noreferrer">Futurepedia</a>
+  </nav>
+
   <div class="search">
     <form action="https://www.google.com/search" method="get" target="_blank" autocomplete="off" role="search" aria-label="谷歌搜索">
       <input type="text" name="q" placeholder="Google 搜索你感兴趣的内容..." aria-label="搜索内容" required>
@@ -255,10 +293,11 @@
     <a href="https://joeabc.com/" target="_blank" rel="noopener noreferrer">joeabc</a>
     <a href="https://alititi.com/" target="_blank" rel="noopener noreferrer">alititi</a>
     <a href="https://ai.tapbi.com/" target="_blank" rel="noopener noreferrer">ai.tapbi</a>
-
   </nav>
 
-  <!-- 分区专区 -->
+  <!-- 其余分区专区、国内常用、折叠专区、成人专区等区域内容保持原样，略。 -->
+  <!-- ...（此处建议粘贴你原有的分区/内容块即可） -->
+<!-- 分区专区 -->
   <nav class="section" aria-label="主要分区">
     <div><strong>🎬 视频：</strong>
       <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">YouTube</a>
@@ -464,6 +503,7 @@
     </div>
   </div>  
 
+
   <!-- 回到顶部按钮 -->
   <button class="back-to-top" onclick="scrollToTop()" aria-label="回到顶部" id="backToTopBtn">⬆️ 回到顶部</button>
 
@@ -529,16 +569,18 @@
       const toggle = document.getElementById("adult-toggle");
       const content = document.getElementById("adult-content");
       let confirmed = false;
-      toggle.addEventListener("click", function () {
-        if (!confirmed) {
-          showAdultConfirm();
-        } else {
-          content.style.display = content.style.display === "block" ? "none" : "block";
-        }
-      });
-      toggle.addEventListener("keydown", function (e) {
-        if (e.key === "Enter" || e.key === " ") toggle.click();
-      });
+      if(toggle && content) {
+        toggle.addEventListener("click", function () {
+          if (!confirmed) {
+            showAdultConfirm();
+          } else {
+            content.style.display = content.style.display === "block" ? "none" : "block";
+          }
+        });
+        toggle.addEventListener("keydown", function (e) {
+          if (e.key === "Enter" || e.key === " ") toggle.click();
+        });
+      }
 
       function showAdultConfirm() {
         const dlg = document.createElement('div');
@@ -559,6 +601,4 @@
     });
   </script>
 </body>
-</html>
-
 </html>

@@ -4,130 +4,75 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>tapBi.com - 实用导航站</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
-    }
-    header {
-      background-color: #4285f4;
-      color: white;
-      padding: 10px 15px;
-    }
-    header .top-bar {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .logo {
-      font-size: 24px;
-      font-weight: bold;
-      margin-right: 15px;
-    }
-    .search-box input {
-      padding: 6px 10px;
-      width: 100%;
-      max-width: 280px;
-      border: none;
-      border-radius: 4px;
-    }
-    main {
-      padding: 20px;
-    }
-    .common-sites, .category {
-      margin-bottom: 20px;
-    }
-    .common-sites h3, .category h3 {
-      font-size: 18px;
-      margin-bottom: 10px;
-      cursor: pointer;
-    }
-    .site-links a {
-      margin-right: 15px;
-      text-decoration: none;
-      color: #1a0dab;
-      display: inline-block;
-      margin-bottom: 6px;
-    }
-    .category-links {
-      display: none;
-      padding-top: 6px;
-    }
-    .category.active .category-links {
-      display: block;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-    }
-    @media (max-width: 600px) {
-      .top-bar {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .search-box {
-        margin-top: 10px;
-        width: 100%;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
 <header>
   <div class="top-bar">
-    <div class="logo">tapBi.com</div>
+    <a class="logo" href="/">tapBi.com</a>
+  </div>
+  <nav class="main-nav">
+    <a href="/" class="nav-link active">首页</a>
+    <a href="https://chat.openai.com/" class="nav-link" target="_blank" rel="noopener noreferrer">ChatGPT</a>
+    <a href="https://www.baidu.com/" class="nav-link" target="_blank" rel="noopener noreferrer">百度</a>
+    <a href="https://www.google.com/" class="nav-link" target="_blank" rel="noopener noreferrer">Google</a>
+    <a href="https://www.bilibili.com/" class="nav-link" target="_blank" rel="noopener noreferrer">哔哩哔哩</a>
+  </nav>
+  <div class="search-bar-wrap">
     <form class="search-box" action="https://www.google.com/search" method="get" target="_blank">
-      <input type="text" name="q" placeholder="Google搜索...">
+      <input type="text" name="q" aria-label="Google搜索" placeholder="Google搜索...">
     </form>
   </div>
 </header>
 
 <main>
-  <div class="common-sites">
+  <section class="common-sites">
     <h3>🌐 常用网站</h3>
     <div class="site-links">
-      <a href="https://www.baidu.com/" target="_blank">百度</a>
-      <a href="https://www.google.com/" target="_blank">Google</a>
-      <a href="https://www.bilibili.com/" target="_blank">哔哩哔哩</a>
-      <a href="https://www.taobao.com/" target="_blank">淘宝</a>
-      <a href="https://www.amazon.com/" target="_blank">Amazon</a>
-      <a href="https://twitter.com/" target="_blank">Twitter</a>
-      <a href="https://www.facebook.com/" target="_blank">Facebook</a>
-      <a href="https://www.youtube.com/" target="_blank">YouTube</a>
+      <a href="https://www.baidu.com/" target="_blank" rel="noopener noreferrer">百度</a>
+      <a href="https://www.google.com/" target="_blank" rel="noopener noreferrer">Google</a>
+      <a href="https://www.bilibili.com/" target="_blank" rel="noopener noreferrer">哔哩哔哩</a>
+      <a href="https://www.taobao.com/" target="_blank" rel="noopener noreferrer">淘宝</a>
+      <a href="https://www.amazon.com/" target="_blank" rel="noopener noreferrer">Amazon</a>
+      <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">Twitter</a>
+      <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a>
+      <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">YouTube</a>
     </div>
-  </div>
+  </section>
 
-  <div class="category" onclick="toggleCategory(this)">
-    <h3>🎮 游戏 / Game</h3>
+  <section class="category" onclick="toggleCategory(this)">
+    <h3>
+      <span class="arrow">&#9654;</span>
+      🎮 游戏 / Game
+    </h3>
     <div class="category-links">
-      <a href="https://store.steampowered.com/" target="_blank">Steam</a>
-      <a href="https://www.epicgames.com/" target="_blank">Epic</a>
+      <a href="https://store.steampowered.com/" target="_blank" rel="noopener noreferrer">Steam</a>
+      <a href="https://www.epicgames.com/" target="_blank" rel="noopener noreferrer">Epic</a>
     </div>
-  </div>
+  </section>
 
-  <div class="category" onclick="toggleCategory(this)">
-    <h3>🏦 银行 / Bank</h3>
+  <section class="category" onclick="toggleCategory(this)">
+    <h3>
+      <span class="arrow">&#9654;</span>
+      🏦 银行 / Bank
+    </h3>
     <div class="category-links">
-      <a href="https://www.bankofamerica.com/" target="_blank">BoA</a>
-      <a href="https://www.chase.com/" target="_blank">Chase</a>
+      <a href="https://www.bankofamerica.com/" target="_blank" rel="noopener noreferrer">BoA</a>
+      <a href="https://www.chase.com/" target="_blank" rel="noopener noreferrer">Chase</a>
     </div>
-  </div>
+  </section>
 
-  <div class="category" onclick="toggleCategory(this)">
-    <h3>📰 新闻 / News</h3>
+  <section class="category" onclick="toggleCategory(this)">
+    <h3>
+      <span class="arrow">&#9654;</span>
+      📰 新闻 / News
+    </h3>
     <div class="category-links">
-      <a href="https://www.cnn.com/" target="_blank">CNN</a>
-      <a href="https://news.baidu.com/" target="_blank">百度新闻</a>
+      <a href="https://www.cnn.com/" target="_blank" rel="noopener noreferrer">CNN</a>
+      <a href="https://news.baidu.com/" target="_blank" rel="noopener noreferrer">百度新闻</a>
     </div>
-  </div>
+  </section>
 
   <div style="margin-top: 40px; text-align: center;">
     <a href="https://chat.openai.com/" target="_blank" style="font-size: 18px; text-decoration: none;">💬 ChatGPT 聊天入口</a>
@@ -141,6 +86,9 @@
 <script>
   function toggleCategory(el) {
     el.classList.toggle('active');
+    // 小箭头旋转
+    let arrow = el.querySelector('.arrow');
+    if (arrow) arrow.style.transform = el.classList.contains('active') ? 'rotate(90deg)' : 'rotate(0deg)';
   }
 </script>
 

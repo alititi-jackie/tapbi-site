@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="tapbi.com - 最全AI工具导航，收录ChatGPT、Midjourney、Claude等热门AI工具，一键直达永久免费。">
   <meta name="keywords" content="AI工具, ChatGPT, Midjourney, Claude, AI导航, 免费AI工具, 人工智能, AI写作, AI绘画, AI编程">
   <meta property="og:title" content="tapbi.com - 最全AI工具导航">
@@ -229,34 +229,25 @@
     }
   </style>
   <script>
-    // 回到顶部按钮功能
+    // 回到顶部按钮动画优化版
     window.addEventListener('scroll', function() {
       const btn = document.getElementById('backToTop');
       if (window.scrollY > 300) {
-        btn.style.display = 'block';
-        btn.style.animation = 'fadeInUp 0.3s';
+        if (btn.style.display !== 'block') {
+          btn.style.display = 'block';
+          btn.style.animation = 'fadeInUp 0.3s';
+        }
       } else {
         btn.style.display = 'none';
+        btn.style.animation = '';
       }
     });
     function backToTop() {
       window.scrollTo({top: 0, behavior: 'smooth'});
     }
-    // 收藏本站功能
+    // 收藏本站功能优化
     function addFavorite() {
-      const url = window.location.href;
-      const title = document.title;
-      try {
-        if (window.external && ('addFavorite' in window.external)) {
-          window.external.addFavorite(url, title);
-        } else if (window.sidebar && window.sidebar.addPanel) {
-          window.sidebar.addPanel(title, url, "");
-        } else {
-          alert('请使用 Ctrl+D (⌘+D) 收藏本页');
-        }
-      } catch(e) {
-        alert('请使用 Ctrl+D (⌘+D) 收藏本页');
-      }
+      alert('请使用 Ctrl+D (Windows) 或 ⌘+D (Mac) 收藏本页。');
     }
     // 夜间模式切换
     function toggleDark() {
@@ -295,57 +286,57 @@
       <article class="card">
         <div class="card-header"><span class="card-icon">🤖</span><h3>ChatGPT</h3></div>
         <p>OpenAI 出品的强大聊天机器人，适合智能问答、内容创作。</p>
-        <a href="https://chat.openai.com" target="_blank" rel="noopener">前往使用 →</a>
+        <a href="https://chat.openai.com" target="_blank" rel="noopener" aria-label="前往 ChatGPT">前往使用 →</a>
       </article>
       <article class="card">
         <div class="card-header"><span class="card-icon">🧠</span><h3>DeepSeek</h3></div>
         <p>国产顶尖AI大模型，支持多轮对话与智能写作。</p>
-        <a href="https://chat.deepseek.com" target="_blank" rel="noopener">前往使用 →</a>
+        <a href="https://chat.deepseek.com" target="_blank" rel="noopener" aria-label="前往 DeepSeek">前往使用 →</a>
       </article>
       <article class="card">
         <div class="card-header"><span class="card-icon">💬</span><h3>Claude</h3></div>
         <p>Anthropic 强力对话AI，长文本处理出色。</p>
-        <a href="https://claude.ai" target="_blank" rel="noopener">前往使用 →</a>
+        <a href="https://claude.ai" target="_blank" rel="noopener" aria-label="前往 Claude">前往使用 →</a>
       </article>
       <article class="card">
         <div class="card-header"><span class="card-icon">🌟</span><h3>Gemini (Google Bard)</h3></div>
         <p>Google官方AI助手，结合谷歌搜索。</p>
-        <a href="https://gemini.google.com" target="_blank" rel="noopener">前往使用 →</a>
+        <a href="https://gemini.google.com" target="_blank" rel="noopener" aria-label="前往 Gemini">前往使用 →</a>
       </article>
       <article class="card">
         <div class="card-header"><span class="card-icon">🦜</span><h3>Poe</h3></div>
         <p>多大模型聚合AI对话平台（支持ChatGPT/Claude等）。</p>
-        <a href="https://poe.com" target="_blank" rel="noopener">前往使用 →</a>
+        <a href="https://poe.com" target="_blank" rel="noopener" aria-label="前往 Poe">前往使用 →</a>
       </article>
       <article class="card">
         <div class="card-header"><span class="card-icon">🪄</span><h3>Bing Copilot</h3></div>
         <p>微软AI助手，支持Chat、搜索、图像生成。</p>
-        <a href="https://www.bing.com/chat" target="_blank" rel="noopener">前往使用 →</a>
+        <a href="https://www.bing.com/chat" target="_blank" rel="noopener" aria-label="前往 Bing Copilot">前往使用 →</a>
       </article>
       <article class="card">
         <div class="card-header"><span class="card-icon">🎨</span><h3>Midjourney</h3></div>
         <p>高质量AI绘画，适合创意图片生成。</p>
-        <a href="https://www.midjourney.com" target="_blank" rel="noopener">前往使用 →</a>
+        <a href="https://www.midjourney.com" target="_blank" rel="noopener" aria-label="前往 Midjourney">前往使用 →</a>
       </article>
       <article class="card">
         <div class="card-header"><span class="card-icon">🌌</span><h3>Stable Diffusion Web</h3></div>
         <p>开源AI图像生成平台，支持自定义模型。</p>
-        <a href="https://stablediffusionweb.com" target="_blank" rel="noopener">前往使用 →</a>
+        <a href="https://stablediffusionweb.com" target="_blank" rel="noopener" aria-label="前往 Stable Diffusion Web">前往使用 →</a>
       </article>
       <article class="card">
         <div class="card-header"><span class="card-icon">🌐</span><h3>DeepL 翻译</h3></div>
         <p>精准自然的AI翻译工具，支持多语言。</p>
-        <a href="https://deepl.com" target="_blank" rel="noopener">前往使用 →</a>
+        <a href="https://deepl.com" target="_blank" rel="noopener" aria-label="前往 DeepL 翻译">前往使用 →</a>
       </article>
       <article class="card">
         <div class="card-header"><span class="card-icon">✍️</span><h3>QuillBot</h3></div>
         <p>AI英文学术改写，润色与辅助写作。</p>
-        <a href="https://quillbot.com" target="_blank" rel="noopener">前往使用 →</a>
+        <a href="https://quillbot.com" target="_blank" rel="noopener" aria-label="前往 QuillBot">前往使用 →</a>
       </article>
       <article class="card">
         <div class="card-header"><span class="card-icon">🔎</span><h3>Perplexity AI</h3></div>
         <p>AI搜索与问答助手，整合多源知识。</p>
-        <a href="https://www.perplexity.ai" target="_blank" rel="noopener">前往使用 →</a>
+        <a href="https://www.perplexity.ai" target="_blank" rel="noopener" aria-label="前往 Perplexity AI">前往使用 →</a>
       </article>
     </div>
   </section>
@@ -356,42 +347,42 @@
       <article class="card">
         <div class="card-header"><span class="card-icon">📒</span><h3>Notion AI</h3></div>
         <p>集成于Notion的AI写作与生产力工具。</p>
-        <a href="https://www.notion.so/product/ai" target="_blank" rel="noopener">前往使用 →</a>
+        <a href="https://www.notion.so/product/ai" target="_blank" rel="noopener" aria-label="前往 Notion AI">前往使用 →</a>
       </article>
       <article class="card">
         <div class="card-header"><span class="card-icon">🚀</span><h3>Copy.ai</h3></div>
         <p>AI文案生成，适用于营销、创意写作。</p>
-        <a href="https://www.copy.ai" target="_blank" rel="noopener">前往使用 →</a>
+        <a href="https://www.copy.ai" target="_blank" rel="noopener" aria-label="前往 Copy.ai">前往使用 →</a>
       </article>
       <article class="card">
         <div class="card-header"><span class="card-icon">📝</span><h3>WriteSonic</h3></div>
         <p>多功能AI写作助手，支持多语言内容创作。</p>
-        <a href="https://writesonic.com" target="_blank" rel="noopener">前往使用 →</a>
+        <a href="https://writesonic.com" target="_blank" rel="noopener" aria-label="前往 WriteSonic">前往使用 →</a>
       </article>
       <article class="card">
         <div class="card-header"><span class="card-icon">🎵</span><h3>Suno AI</h3></div>
         <p>AI音乐生成平台，输入提示即可创作歌曲。</p>
-        <a href="https://suno.ai/" target="_blank" rel="noopener">前往使用 →</a>
+        <a href="https://suno.ai/" target="_blank" rel="noopener" aria-label="前往 Suno AI">前往使用 →</a>
       </article>
       <article class="card">
         <div class="card-header"><span class="card-icon">☁️</span><h3>腾讯混元大模型</h3></div>
         <p>腾讯自研大语言模型，支持多场景AI服务。</p>
-        <a href="https://hunyuan.tencent.com/" target="_blank" rel="noopener">前往使用 →</a>
+        <a href="https://hunyuan.tencent.com/" target="_blank" rel="noopener" aria-label="前往 腾讯混元大模型">前往使用 →</a>
       </article>
       <article class="card">
         <div class="card-header"><span class="card-icon">🌈</span><h3>百川 Baichuan</h3></div>
         <p>国产多功能大模型平台，支持多语言和插件。</p>
-        <a href="https://www.baichuan-ai.com/" target="_blank" rel="noopener">前往使用 →</a>
+        <a href="https://www.baichuan-ai.com/" target="_blank" rel="noopener" aria-label="前往 百川 Baichuan">前往使用 →</a>
       </article>
       <article class="card">
         <div class="card-header"><span class="card-icon">✨</span><h3>讯飞星火</h3></div>
         <p>科大讯飞AI大模型，支持教育、办公等领域。</p>
-        <a href="https://xinghuo.xfyun.cn/" target="_blank" rel="noopener">前往使用 →</a>
+        <a href="https://xinghuo.xfyun.cn/" target="_blank" rel="noopener" aria-label="前往 讯飞星火">前往使用 →</a>
       </article>
       <article class="card">
         <div class="card-header"><span class="card-icon">💡</span><h3>Baidu 文心一言</h3></div>
         <p>百度推出的AI对话和内容生成平台。</p>
-        <a href="https://yiyan.baidu.com/" target="_blank" rel="noopener">前往使用 →</a>
+        <a href="https://yiyan.baidu.com/" target="_blank" rel="noopener" aria-label="前往 百度文心一言">前往使用 →</a>
       </article>
     </div>
   </section>
@@ -402,32 +393,32 @@
       <article class="card">
         <div class="card-header"><span class="card-icon">🖌️</span><h3>Canva AI</h3></div>
         <p>在线设计平台的AI功能，智能设计与图片生成。</p>
-        <a href="https://www.canva.com/ai/" target="_blank" rel="noopener">前往使用 →</a>
+        <a href="https://www.canva.com/ai/" target="_blank" rel="noopener" aria-label="前往 Canva AI">前往使用 →</a>
       </article>
       <article class="card">
         <div class="card-header"><span class="card-icon">🔲</span><h3>Remove.bg</h3></div>
         <p>AI智能抠图工具，快速去除图片背景。</p>
-        <a href="https://remove.bg" target="_blank" rel="noopener">前往使用 →</a>
+        <a href="https://remove.bg" target="_blank" rel="noopener" aria-label="前往 Remove.bg">前往使用 →</a>
       </article>
       <article class="card">
         <div class="card-header"><span class="card-icon">🎬</span><h3>腾讯智影</h3></div>
         <p>腾讯AI视频与音频编辑平台。</p>
-        <a href="https://zenvideo.qq.com" target="_blank" rel="noopener">前往使用 →</a>
+        <a href="https://zenvideo.qq.com" target="_blank" rel="noopener" aria-label="前往 腾讯智影">前往使用 →</a>
       </article>
       <article class="card">
         <div class="card-header"><span class="card-icon">📷</span><h3>美图AI</h3></div>
         <p>美图公司出品，AI智能修图与生成。</p>
-        <a href="https://www.meitu.com/ai/" target="_blank" rel="noopener">前往使用 →</a>
+        <a href="https://www.meitu.com/ai/" target="_blank" rel="noopener" aria-label="前往 美图AI">前往使用 →</a>
       </article>
       <article class="card">
         <div class="card-header"><span class="card-icon">🎥</span><h3>Runway ML</h3></div>
         <p>AI视频编辑与生成平台，适合创意短片。</p>
-        <a href="https://runwayml.com" target="_blank" rel="noopener">前往使用 →</a>
+        <a href="https://runwayml.com" target="_blank" rel="noopener" aria-label="前往 Runway ML">前往使用 →</a>
       </article>
       <article class="card">
         <div class="card-header"><span class="card-icon">👤</span><h3>Pica AI</h3></div>
         <p>AI头像与漫画生成工具。</p>
-        <a href="https://www.pica-ai.com/" target="_blank" rel="noopener">前往使用 →</a>
+        <a href="https://www.pica-ai.com/" target="_blank" rel="noopener" aria-label="前往 Pica AI">前往使用 →</a>
       </article>
     </div>
   </section>
@@ -438,27 +429,27 @@
       <article class="card">
         <div class="card-header"><span class="card-icon">👨‍💻</span><h3>Github Copilot</h3></div>
         <p>AI编程助手，自动代码补全与建议。</p>
-        <a href="https://github.com/copilot" target="_blank" rel="noopener">前往使用 →</a>
+        <a href="https://github.com/copilot" target="_blank" rel="noopener" aria-label="前往 Github Copilot">前往使用 →</a>
       </article>
       <article class="card">
         <div class="card-header"><span class="card-icon">⚡</span><h3>Tabnine</h3></div>
         <p>AI代码自动补全，支持多种IDE。</p>
-        <a href="https://www.tabnine.com/" target="_blank" rel="noopener">前往使用 →</a>
+        <a href="https://www.tabnine.com/" target="_blank" rel="noopener" aria-label="前往 Tabnine">前往使用 →</a>
       </article>
       <article class="card">
         <div class="card-header"><span class="card-icon">📚</span><h3>Notion</h3></div>
         <p>集成AI的知识与项目管理平台。</p>
-        <a href="https://www.notion.so/" target="_blank" rel="noopener">前往使用 →</a>
+        <a href="https://www.notion.so/" target="_blank" rel="noopener" aria-label="前往 Notion">前往使用 →</a>
       </article>
       <article class="card">
         <div class="card-header"><span class="card-icon">☁️</span><h3>Google Colab</h3></div>
         <p>谷歌云端AI编程与数据分析环境。</p>
-        <a href="https://colab.research.google.com/" target="_blank" rel="noopener">前往使用 →</a>
+        <a href="https://colab.research.google.com/" target="_blank" rel="noopener" aria-label="前往 Google Colab">前往使用 →</a>
       </article>
       <article class="card">
         <div class="card-header"><span class="card-icon">🔗</span><h3>FlowGPT</h3></div>
         <p>AI提示词分享与自动化平台。</p>
-        <a href="https://flowgpt.com/" target="_blank" rel="noopener">前往使用 →</a>
+        <a href="https://flowgpt.com/" target="_blank" rel="noopener" aria-label="前往 FlowGPT">前往使用 →</a>
       </article>
     </div>
   </section>
@@ -469,64 +460,63 @@
       <article class="card">
         <div class="card-header"><span class="card-icon">🤗</span><h3>Hugging Face</h3></div>
         <p>全球最大AI模型社区与平台，丰富资源免费用。</p>
-        <a href="https://huggingface.co/" target="_blank" rel="noopener">前往使用 →</a>
+        <a href="https://huggingface.co/" target="_blank" rel="noopener" aria-label="前往 Hugging Face">前往使用 →</a>
       </article>
       <article class="card">
         <div class="card-header"><span class="card-icon">🎭</span><h3>OpenArt</h3></div>
         <p>AI艺术作品分享与生成平台。</p>
-        <a href="https://openart.ai/" target="_blank" rel="noopener">前往使用 →</a>
+        <a href="https://openart.ai/" target="_blank" rel="noopener" aria-label="前往 OpenArt">前往使用 →</a>
       </article>
       <article class="card">
         <div class="card-header"><span class="card-icon">📚</span><h3>Futurepedia</h3></div>
         <p>AI工具大全，收录上千款AI网站。</p>
-        <a href="https://www.futurepedia.io/" target="_blank" rel="noopener">前往使用 →</a>
+        <a href="https://www.futurepedia.io/" target="_blank" rel="noopener" aria-label="前往 Futurepedia">前往使用 →</a>
       </article>
       <article class="card">
         <div class="card-header"><span class="card-icon">🛠️</span><h3>Supertools</h3></div>
         <p>全球AI工具导航与应用评测。</p>
-        <a href="https://supertools.therundown.ai/" target="_blank" rel="noopener">前往使用 →</a>
+        <a href="https://supertools.therundown.ai/" target="_blank" rel="noopener" aria-label="前往 Supertools">前往使用 →</a>
+      </article>
+    </div>
+  </section>
+
+  <section aria-labelledby="free-image">
+    <div class="section-title" id="free-image">🖼️ 免费图片素材网站</div>
+    <div class="grid">
+      <article class="card">
+        <div class="card-header"><span class="card-icon">📷</span><h3>Unsplash</h3></div>
+        <p>高质量免费图片素材，可用于商业用途，无需署名。</p>
+        <a href="https://unsplash.com" target="_blank" rel="noopener" aria-label="前往 Unsplash">前往使用 →</a>
+      </article>
+      <article class="card">
+        <div class="card-header"><span class="card-icon">🌄</span><h3>Pexels</h3></div>
+        <p>提供高清照片与视频素材，支持商用与中文搜索。</p>
+        <a href="https://www.pexels.com/" target="_blank" rel="noopener" aria-label="前往 Pexels">前往使用 →</a>
+      </article>
+      <article class="card">
+        <div class="card-header"><span class="card-icon">🖼️</span><h3>Pixabay</h3></div>
+        <p>包含图片、插画、视频、音乐等免版权素材。</p>
+        <a href="https://pixabay.com/" target="_blank" rel="noopener" aria-label="前往 Pixabay">前往使用 →</a>
+      </article>
+      <article class="card">
+        <div class="card-header"><span class="card-icon">🎨</span><h3>Freepik</h3></div>
+        <p>提供矢量图、插画、PSD模板等设计资源，部分内容需署名或付费。</p>
+        <a href="https://www.freepik.com/" target="_blank" rel="noopener" aria-label="前往 Freepik">前往使用 →</a>
+      </article>
+      <article class="card">
+        <div class="card-header"><span class="card-icon">🧑‍🎨</span><h3>Reshot</h3></div>
+        <p>风格独特的小众摄影作品平台，全部可免费商用。</p>
+        <a href="https://www.reshot.com/" target="_blank" rel="noopener" aria-label="前往 Reshot">前往使用 →</a>
+      </article>
+      <article class="card">
+        <div class="card-header"><span class="card-icon">🏞️</span><h3>Life of Pix</h3></div>
+        <p>专业摄影师分享的高分辨率摄影作品，艺术感强。</p>
+        <a href="https://www.lifeofpix.com/" target="_blank" rel="noopener" aria-label="前往 Life of Pix">前往使用 →</a>
       </article>
     </div>
   </section>
 </main>
 
-<section aria-labelledby="free-image">
-  <div class="section-title" id="free-image">🖼️ 免费图片素材网站</div>
-  <div class="grid">
-    <article class="card">
-      <div class="card-header"><span class="card-icon">📷</span><h3>Unsplash</h3></div>
-      <p>高质量免费图片素材，可用于商业用途，无需署名。</p>
-      <a href="https://unsplash.com" target="_blank" rel="noopener">前往使用 →</a>
-    </article>
-    <article class="card">
-      <div class="card-header"><span class="card-icon">🌄</span><h3>Pexels</h3></div>
-      <p>提供高清照片与视频素材，支持商用与中文搜索。</p>
-      <a href="https://www.pexels.com/" target="_blank" rel="noopener">前往使用 →</a>
-    </article>
-    <article class="card">
-      <div class="card-header"><span class="card-icon">🖼️</span><h3>Pixabay</h3></div>
-      <p>包含图片、插画、视频、音乐等免版权素材。</p>
-      <a href="https://pixabay.com/" target="_blank" rel="noopener">前往使用 →</a>
-    </article>
-    <article class="card">
-      <div class="card-header"><span class="card-icon">🎨</span><h3>Freepik</h3></div>
-      <p>提供矢量图、插画、PSD模板等设计资源，部分内容需署名或付费。</p>
-      <a href="https://www.freepik.com/" target="_blank" rel="noopener">前往使用 →</a>
-    </article>
-    <article class="card">
-      <div class="card-header"><span class="card-icon">🧑‍🎨</span><h3>Reshot</h3></div>
-      <p>风格独特的小众摄影作品平台，全部可免费商用。</p>
-      <a href="https://www.reshot.com/" target="_blank" rel="noopener">前往使用 →</a>
-    </article>
-    <article class="card">
-      <div class="card-header"><span class="card-icon">🏞️</span><h3>Life of Pix</h3></div>
-      <p>专业摄影师分享的高分辨率摄影作品，艺术感强。</p>
-      <a href="https://www.lifeofpix.com/" target="_blank" rel="noopener">前往使用 →</a>
-    </article>
-  </div>
-</section>
-
-<!-- SEO FAQ 区块 -->
 <section class="faq-section" aria-labelledby="faq">
   <h2 id="faq">常见问题（FAQ）</h2>
   <div class="faq">

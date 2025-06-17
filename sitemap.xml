@@ -9,27 +9,32 @@
 
 <url>
   <loc>https://tapbi.com/</loc>
-  <lastmod>2025-06-08T14:03:57+00:00</lastmod>
+  <lastmod>2025-06-17T00:54:26+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://tapbi.com/ai</loc>
-  <lastmod>2025-06-08T14:03:57+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://tapbi.com/mi</loc>
-  <lastmod>2025-06-08T14:03:57+00:00</lastmod>
+  <lastmod>2025-06-17T00:54:26+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://tapbi.com/About</loc>
-  <lastmod>2025-06-08T14:03:57+00:00</lastmod>
+  <lastmod>2025-06-17T00:54:26+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://tapbi.com/sell</loc>
-  <lastmod>2025-06-08T14:03:57+00:00</lastmod>
+  <lastmod>2025-06-17T00:54:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://tapbi.com/mi</loc>
+  <lastmod>2025-06-17T00:54:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://tapbi.com/dmv</loc>
+  <lastmod>2025-06-17T00:54:26+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 
